@@ -1,0 +1,4 @@
+env
+screencaptures/*.jpg
+static/images/*.jpg
+__pycache__

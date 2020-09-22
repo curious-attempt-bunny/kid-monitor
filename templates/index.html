@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <!-- include Cycle plugin -->
+    <script type="text/javascript" src="http://malsup.github.io/jquery.cycle.all.js"></script>
+                                        
+    <script>
+      $(document).ready(function() {
+        $('.slideshow').cycle({
+          timeout: 2000,
+          speed: 10,
+          prev: '#prev',
+          next: '#next'
+        });
+      });
+    </script>
+  </head>
+  <body style="margin:0; padding:0;">
+    <div class="slideshow">
+      {% for image in images %}
+        <div>
+          <img src="static/images/{{ image }}">
+          <span style="position:absolute; left:0.5em; right:0.5em;">{{ image }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
