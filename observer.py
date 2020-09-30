@@ -13,6 +13,6 @@ def image():
 
 @app.route('/')
 def index():
-  images = os.listdir('static/images')[-20:]
+  images = os.listdir('static/images')
   images.sort()
-  return render_template('index.html', images=images)
+  return render_template('index.html', images=images[-int(request.args.get('slides', '1')):])
