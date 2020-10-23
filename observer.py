@@ -15,4 +15,4 @@ def image():
 def index():
   images = os.listdir('static/images')
   images.sort()
-  return render_template('index.html', images=images[-int(request.args.get('slides', '1')):])
+  return render_template('index.html', images=images[-100:])
