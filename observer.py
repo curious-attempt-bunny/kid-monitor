@@ -15,4 +15,7 @@ def image():
 def index():
   images = os.listdir('static/images')
   images.sort()
+  while len(images) < 100:
+    images.append('no-image.png')
+
   return render_template('index.html', images=images[-100:])
