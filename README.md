@@ -24,7 +24,7 @@ open http://localhost:5000
 ```bash
 git remote add piku $PIKU_SERVER:kidmonitor
 git push piku master
-piku log # verify all is well
+piku logs # verify all is well (assumes piku-cli installed)
 open "http://$(echo $PIKU_SERVER | cut -d@ -f2):5000/"
 ```
 
